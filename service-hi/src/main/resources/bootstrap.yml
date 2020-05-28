@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: service-hi
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+        prefix: service-hi # 默认是spring.application.name
+        file-extension: yml
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+  profiles:
+    active: dev
+#dataId格式：{prefix}-{profiles}.{file-extension}
+
